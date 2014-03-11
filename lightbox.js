@@ -27,6 +27,8 @@
 			onBeforeClose: (typeof opts.onBeforeClose === 'function') ? opts.onBeforeClose : function () {},
 			onClose: (typeof opts.onClose === 'function') ? opts.onClose : function () {}
 		};
+		
+		_this.init();
 	};
 	Lightbox.prototype = {
 		init: function () {

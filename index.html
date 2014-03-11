@@ -8,14 +8,29 @@
 		<div id="trigger">Toggle Lightbox</div>
 		
 		<div id="lightbox">Lightbox <div class="close">X</div></div>
+		<div id="debug"></div>
 	
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="lightbox.js"></script>
 		<script>
 			jQuery(document).ready(function (event) {
-				var lightbox = (new Lightbox($('#lightbox'), {
-					$trigger: $('#trigger')
-				}).init());
+				var $debug = $('#debug'), 
+					lightbox = new Lightbox($('#lightbox'), {
+						$trigger: $('#trigger'),
+						duration: 500,
+						onBeforeOpen: function () {
+							$debug.html('Lightbox opening');
+						},
+						onOpen: function () {
+							$debug.html('Lightbox opened');
+						},
+						onBeforeClose: function () {
+							$debug.html('Lightbox closing');
+						},
+						onClose: function () {
+							$debug.html('Lightbox closed');
+						}
+					});
 			});
 		</script>
 	</body>
