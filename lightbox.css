@@ -1,0 +1,26 @@
+body { font-family: helvetica, arial, sans-serif; }
+#lightbox {
+	display: none;
+	position: absolute;
+	width: 500px;
+	left: 50%;
+	margin-left: -250px;
+	top: 10%;
+	text-align: center;
+	background: #dedede;
+	border-radius: 5px;
+	border: 2px solid #333;
+	padding: 20px;
+}
+	#lightbox .close {
+		font-size: 12px;
+		font-weight: bold;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		cursor: pointer;
+	}
+#trigger {
+	cursor: pointer;
+	font-size: 16px;
+}

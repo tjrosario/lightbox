@@ -1,0 +1,3 @@
+## Lightbox
+
+Lightweight lightbox plugin.

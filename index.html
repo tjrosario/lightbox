@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="lightbox.css" />
+	</head>
+	<body>
+		
+		<div id="trigger">Toggle Lightbox</div>
+		
+		<div id="lightbox">Lightbox <div class="close">X</div></div>
+	
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="lightbox.js"></script>
+		<script>
+			jQuery(document).ready(function (event) {
+				var lightbox = (new Lightbox($('#lightbox'), {
+					$trigger: $('#trigger')
+				}).init());
+			});
+		</script>
+	</body>
+</html>
